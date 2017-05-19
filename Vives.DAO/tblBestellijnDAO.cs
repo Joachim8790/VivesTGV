@@ -13,7 +13,7 @@ namespace Vives.DAO
         //krijg het aantal personen voor hotel of trein van de bestellijn
         public int countPersonen(tblBestellijn bestellijn)
         {
-            using (var db = new VivesTGVEntities())
+            using (var db = new VivesTGVDatabaseEntities())
             {
                 return db.tblTreinplaats.Where(a => a.BestellijnID == bestellijn.BestellijnID).Count();
             }
