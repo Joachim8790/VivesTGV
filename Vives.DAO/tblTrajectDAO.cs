@@ -13,7 +13,7 @@ namespace Vives.DAO
         //Zoek traject op vertrek en aankomst
         public tblTraject getTrajectByVertrekAankomst(string vertrek,string aankomst)
         {
-            using (var db = new VivesTGVEntities1())
+            using (var db = new VivesTGVDatabaseEntities())
             {
                 int vertrekID = db.tblStad.Where(a => a.Naam == vertrek).FirstOrDefault().StadID;
                 int aankomstID = db.tblStad.Where(a => a.Naam == aankomst).FirstOrDefault().StadID;
@@ -29,7 +29,7 @@ namespace Vives.DAO
         //Zoek traject op TrajectID
         public tblTraject getTrajectByID(int ID)
         {
-            using (var db = new VivesTGVEntities1())
+            using (var db = new VivesTGVDatabaseEntities())
             {
                 
 
@@ -41,7 +41,7 @@ namespace Vives.DAO
         //krijg alle tussenlocaties van een traject
         public IEnumerable<string> getStopsByTraject(tblTraject traject)
         {
-            using (var db = new VivesTGVEntities1())
+            using (var db = new VivesTGVDatabaseEntities())
             {
 
 
@@ -63,7 +63,7 @@ namespace Vives.DAO
             {
                 multiplier = 0.3;
             }
-            using (var db = new VivesTGVEntities1())
+            using (var db = new VivesTGVDatabaseEntities())
             {
                 if (treinklasse == 0)
                 {
@@ -94,7 +94,7 @@ namespace Vives.DAO
             int aantalplaatsen = 0;
 
 
-            using (var db = new VivesTGVEntities1())
+            using (var db = new VivesTGVDatabaseEntities())
             {
                 if (treinklasse == 0)
                 {

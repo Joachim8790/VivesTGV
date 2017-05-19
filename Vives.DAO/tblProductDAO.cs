@@ -13,7 +13,7 @@ namespace Vives.DAO
         //kijken als het een hotel is
         public bool isHotel(tblProduct product)
         {
-            using (var db = new VivesTGVEntities1())
+            using (var db = new VivesTGVDatabaseEntities())
             {
                 if (product.HotelID == null)
                 {
@@ -28,7 +28,7 @@ namespace Vives.DAO
         //prijs opvragen
         public double getPrijs(tblProduct product)
         {
-            using (var db = new VivesTGVEntities1())
+            using (var db = new VivesTGVDatabaseEntities())
             {
                 if (isHotel(product))//check hotel of traject
                 {
@@ -51,7 +51,7 @@ namespace Vives.DAO
         //zoek product op ID
         public tblProduct getProduct(int ID)
         {
-            using (var db = new VivesTGVEntities1())
+            using (var db = new VivesTGVDatabaseEntities())
             {
                 return db.tblProduct.Where(a => a.ProductID == ID).FirstOrDefault();
             }
@@ -59,7 +59,7 @@ namespace Vives.DAO
         //zoek product op hotelID
         public tblProduct getProductByHotel(int hotelID)
         {
-            using (var db = new VivesTGVEntities1())
+            using (var db = new VivesTGVDatabaseEntities())
             {
                 
                     return db.tblProduct.Where(a => a.HotelID == hotelID).FirstOrDefault();
@@ -69,7 +69,7 @@ namespace Vives.DAO
         //zoek product op TrajectID
         public tblProduct getProductByTraject(int trajectID,bool isBusinessklasse)
         {
-            using (var db = new VivesTGVEntities1())
+            using (var db = new VivesTGVDatabaseEntities())
             {
 
                 if (isBusinessklasse)

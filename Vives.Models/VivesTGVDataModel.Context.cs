@@ -13,10 +13,10 @@ namespace Vives.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class VivesTGVEntities1 : DbContext
+    public partial class VivesTGVDatabaseEntities : DbContext
     {
-        public VivesTGVEntities1()
-            : base("name=VivesTGVEntities1")
+        public VivesTGVDatabaseEntities()
+            : base("name=VivesTGVDatabaseEntities")
         {
         }
     
@@ -30,16 +30,15 @@ namespace Vives.Models
         public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
         public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<tblBestellijn> tblBestellijn { get; set; }
+        public virtual DbSet<tblBestelling> tblBestelling { get; set; }
         public virtual DbSet<tblGebruiker> tblGebruiker { get; set; }
         public virtual DbSet<tblHotel> tblHotel { get; set; }
         public virtual DbSet<tblProduct> tblProduct { get; set; }
         public virtual DbSet<tblStad> tblStad { get; set; }
         public virtual DbSet<tblTraject> tblTraject { get; set; }
+        public virtual DbSet<tblTreinplaats> tblTreinplaats { get; set; }
         public virtual DbSet<tblTussenlocatie> tblTussenlocatie { get; set; }
         public virtual DbSet<tblWinkelmandlijn> tblWinkelmandlijn { get; set; }
-        public virtual DbSet<tblTreinplaats> tblTreinplaats { get; set; }
-        public virtual DbSet<tblBestelling> tblBestelling { get; set; }
     }
 }

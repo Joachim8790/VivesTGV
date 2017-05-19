@@ -13,7 +13,7 @@ namespace Vives.DAO
         //krijg alle winkelmandlijnen van een gebruiker
         public IEnumerable<tblWinkelmandlijn> getWinkelmandlijnenByGebruiker(string ID)
         {
-            using (var db = new VivesTGVEntities1())
+            using (var db = new VivesTGVDatabaseEntities())
             {
                 return db.tblWinkelmandlijn.Where(a => a.GebruikersID == ID).ToList();
             }
@@ -21,7 +21,7 @@ namespace Vives.DAO
         //verwijder een winkelmandlijn
         public void deleteWinkelmandlijn(int id)
         {
-            using (var db = new VivesTGVEntities1())
+            using (var db = new VivesTGVDatabaseEntities())
             {
                 tblWinkelmandlijn lijn = getWinkelmandLijn(id);
                 db.Entry(lijn).State = EntityState.Deleted;    
@@ -32,7 +32,7 @@ namespace Vives.DAO
         //verwijder alle winkelmandlijnen van een gebruiker
         public void clearWinkelmand(string ID)
         {
-            using (var db = new VivesTGVEntities1())
+            using (var db = new VivesTGVDatabaseEntities())
             {
                 db.tblWinkelmandlijn.RemoveRange(db.tblWinkelmandlijn.Where(b => b.GebruikersID == ID).ToList());
                 db.SaveChanges();
@@ -41,7 +41,7 @@ namespace Vives.DAO
         //voeg een winkelmandlijn toe
         public void addWinkelmandLijn(tblWinkelmandlijn winkelmandlijn)
         {
-            using (var db = new VivesTGVEntities1())
+            using (var db = new VivesTGVDatabaseEntities())
             {
                 db.tblWinkelmandlijn.Add(winkelmandlijn);
                 db.SaveChanges();
@@ -50,7 +50,7 @@ namespace Vives.DAO
         //zoek winkelmandlijn
         public tblWinkelmandlijn getWinkelmandLijn(int ID)
         {
-            using (var db = new VivesTGVEntities1())
+            using (var db = new VivesTGVDatabaseEntities())
             {
                 return db.tblWinkelmandlijn.Where(a => a.WinkelmandlijnID == ID).FirstOrDefault();
             }

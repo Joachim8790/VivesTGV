@@ -19,9 +19,9 @@ namespace Vives.Models
         {
             this.AspNetUserClaims = new HashSet<AspNetUserClaims>();
             this.AspNetUserLogins = new HashSet<AspNetUserLogins>();
-            this.AspNetRoles = new HashSet<AspNetRoles>();
-            this.tblWinkelmandlijn = new HashSet<tblWinkelmandlijn>();
             this.tblBestelling = new HashSet<tblBestelling>();
+            this.tblWinkelmandlijn = new HashSet<tblWinkelmandlijn>();
+            this.AspNetRoles = new HashSet<AspNetRoles>();
         }
     
         public string Id { get; set; }
@@ -44,10 +44,10 @@ namespace Vives.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AspNetUserLogins> AspNetUserLogins { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AspNetRoles> AspNetRoles { get; set; }
+        public virtual ICollection<tblBestelling> tblBestelling { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblWinkelmandlijn> tblWinkelmandlijn { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblBestelling> tblBestelling { get; set; }
+        public virtual ICollection<AspNetRoles> AspNetRoles { get; set; }
     }
 }
