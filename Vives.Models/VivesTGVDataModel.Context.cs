@@ -13,10 +13,10 @@ namespace Vives.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class VivesTGVDatabaseEntities : DbContext
+    public partial class VivesTGVEntities : DbContext
     {
-        public VivesTGVDatabaseEntities()
-            : base("name=VivesTGVDatabaseEntities")
+        public VivesTGVEntities()
+            : base("name=VivesTGVEntities")
         {
         }
     
@@ -40,5 +40,6 @@ namespace Vives.Models
         public virtual DbSet<tblTreinplaats> tblTreinplaats { get; set; }
         public virtual DbSet<tblTussenlocatie> tblTussenlocatie { get; set; }
         public virtual DbSet<tblWinkelmandlijn> tblWinkelmandlijn { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

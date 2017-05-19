@@ -13,7 +13,7 @@ namespace Vives.DAO
         //Zoek alle hotels in een stad
         public tblHotel[] getHotelsByStad(int stadID)
         {
-            using (var db = new VivesTGVDatabaseEntities())
+            using (var db = new VivesTGVEntities())
             {
                 return db.tblHotel.Where(a => a.StadID == stadID).ToArray();
             }
@@ -23,7 +23,7 @@ namespace Vives.DAO
         //Zoek een hotel op ID
         public tblHotel getHotelsByID(int ID)
         {
-            using (var db = new VivesTGVDatabaseEntities())
+            using (var db = new VivesTGVEntities())
             {
                 return db.tblHotel.Where(a => a.HotelID == ID).FirstOrDefault();
             }

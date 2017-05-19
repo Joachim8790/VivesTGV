@@ -35,6 +35,7 @@
         <AssociationConnector Association="VivesTGVModel.FK_tblTraject_tblStadVertrek" ManuallyRouted="false" />
         <AssociationConnector Association="VivesTGVModel.FK_tblTussenlocatie_tblTraject" ManuallyRouted="false" />
         <AssociationConnector Association="VivesTGVModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="VivesTGVModel.sysdiagrams" Width="1.5" PointX="10.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
