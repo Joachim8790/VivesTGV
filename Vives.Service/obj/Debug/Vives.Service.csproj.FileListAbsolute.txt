@@ -9,3 +9,14 @@ S:\Web Development\VivesTGV\Vives.Service\bin\Debug\EntityFramework.xml
 S:\Web Development\VivesTGV\Vives.Service\obj\Debug\Vives.Service.csprojResolveAssemblyReference.cache
 S:\Web Development\VivesTGV\Vives.Service\obj\Debug\Vives.Service.dll
 S:\Web Development\VivesTGV\Vives.Service\obj\Debug\Vives.Service.pdb
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Service\bin\Debug\Vives.Service.dll
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Service\bin\Debug\Vives.Service.pdb
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Service\bin\Debug\Vives.DAO.dll
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Service\bin\Debug\Vives.Models.dll
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Service\bin\Debug\EntityFramework.dll
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Service\bin\Debug\Vives.DAO.pdb
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Service\bin\Debug\Vives.Models.pdb
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Service\bin\Debug\EntityFramework.xml
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Service\obj\Debug\Vives.Service.csprojResolveAssemblyReference.cache
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Service\obj\Debug\Vives.Service.dll
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Service\obj\Debug\Vives.Service.pdb

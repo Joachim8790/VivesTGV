@@ -10,3 +10,15 @@ S:\Web Development\VivesTGV\Vives.DAO\bin\Debug\EntityFramework.SqlServer.xml
 S:\Web Development\VivesTGV\Vives.DAO\obj\Debug\Vives.DAO.csprojResolveAssemblyReference.cache
 S:\Web Development\VivesTGV\Vives.DAO\obj\Debug\Vives.DAO.dll
 S:\Web Development\VivesTGV\Vives.DAO\obj\Debug\Vives.DAO.pdb
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.DAO\bin\Debug\Vives.DAO.dll.config
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.DAO\bin\Debug\Vives.DAO.dll
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.DAO\bin\Debug\Vives.DAO.pdb
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.DAO\bin\Debug\EntityFramework.dll
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.DAO\bin\Debug\Vives.Models.dll
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.DAO\bin\Debug\Vives.Models.pdb
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.DAO\bin\Debug\EntityFramework.xml
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.DAO\obj\Debug\Vives.DAO.csprojResolveAssemblyReference.cache
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.DAO\obj\Debug\Vives.DAO.dll
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.DAO\obj\Debug\Vives.DAO.pdb

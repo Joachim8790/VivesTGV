@@ -8,3 +8,11 @@ S:\Web Development\VivesTGV\Vives.Models\bin\Debug\EntityFramework.SqlServer.xml
 S:\Web Development\VivesTGV\Vives.Models\obj\Debug\Vives.Models.dll
 S:\Web Development\VivesTGV\Vives.Models\obj\Debug\Vives.Models.pdb
 S:\Web Development\VivesTGV\Vives.Models\obj\Debug\Vives.Models.csprojResolveAssemblyReference.cache
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Models\bin\Debug\Vives.Models.dll.config
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Models\bin\Debug\Vives.Models.dll
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Models\bin\Debug\Vives.Models.pdb
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Models\bin\Debug\EntityFramework.xml
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Models\obj\Debug\Vives.Models.csprojResolveAssemblyReference.cache
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Models\obj\Debug\Vives.Models.dll
+C:\Users\joach\Source\Repos\VivesTGV2\Vives.Models\obj\Debug\Vives.Models.pdb
