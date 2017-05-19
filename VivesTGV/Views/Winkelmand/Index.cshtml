@@ -1,0 +1,121 @@
+﻿@model VivesTGV.Models.WinkelmandViewModel
+
+@{
+    double totaalprijs = 0;
+    ViewBag.Title = "Index";
+    for (int i = 0; i < Model.hotelprijzen.Count(); i++)
+    {
+        totaalprijs += Model.hotelprijzen[i];
+    }
+    for (int i = 0; i < Model.trajectprijzen.Count(); i++)
+    {
+        totaalprijs += Model.trajectprijzen[i];
+    }
+}
+
+
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Jouw winkelmandje</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <table id="tabel" class="table">
+                <thead>
+                    <tr>
+                        <th>Beschrijving</th>
+                        <th> Vertrekdatum</th>
+                        <th> Naam reiziger</th>
+                        <th>Prijs</th>
+                        <th> </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < Model.trajectenIDs.Count(); i++)
+                    {
+                        <tr id=@i>
+                            <td>"Treinticket van "@Model.trajectvertrek[i] "naar "@Model.trajectaankomst[i] treinplaats @Model.treinplaats[i]</td>
+                            <td>@Model.trajectdatum[i].Date.ToShortDateString()</td>
+                            <td>@Model.trajectnamen[i]</td>
+                            <td>€@Model.trajectprijzen[i]</td>
+                            <td>
+                                @Ajax.ActionLink("Verwijder", "VerwijderLijn", new { id = Model.trajectwinkelmandIDs[i] }, new AjaxOptions()
+                           {
+                               Confirm = "Ben je zeker dat je deze lijn wilt verwijderen?",
+                               HttpMethod = "DELETE",
+                               OnComplete = string.Format("DeleteRijInTabel({0})",i)
+
+                           })
+                        </td>
+                    </tr>
+                        @Html.HiddenFor(model => model.treinplaats[i])
+                        @Html.HiddenFor(model => model.treinklassen[i])
+                        @Html.HiddenFor(model => model.trajectnamen[i])
+                        @Html.HiddenFor(model => model.trajectdatum[i])
+                        @Html.HiddenFor(model => model.trajectenIDs[i])
+                        @Html.HiddenFor(model => model.trajectvertrek[i])
+                        @Html.HiddenFor(model => model.trajectaankomst[i])
+                        @Html.HiddenFor(model => model.trajectprijzen[i])
+
+
+                    }
+                    @for (int i = 0; i < Model.hotelIDs.Count(); i++)
+                {
+                        <tr id=@(i+Model.trajectwinkelmandIDs.Count())>
+                            <td>"Hotelboeking in @Model.hotelnaam[i]</td>
+                            <td>@Model.hoteldatum[i].Date.ToShortDateString()</td>
+                            <td>@Model.hotelnamen[i]</td>
+                            <td>€@Model.hotelprijzen[i]</td>
+                            <td>
+                                @Ajax.ActionLink("Verwijder", "VerwijderLijn", new {id= Model.hotelwinkelmandIDs[i]} , new AjaxOptions()
+                           {
+                               Confirm = "Ben je zeker dat je deze lijn wilt verwijderen?",
+                               HttpMethod = "DELETE",
+                               OnComplete = string.Format("DeleteRijInTabel({0})", (i+Model.trajectwinkelmandIDs.Count()))
+                               
+
+                           })
+                            </td>
+                        </tr>
+                        @Html.HiddenFor(model => model.hotelnamen[i])
+                        @Html.HiddenFor(model => model.hoteldatum[i])
+                        @Html.HiddenFor(model => model.hotelIDs[i])
+                        @Html.HiddenFor(model => model.hotelnaam[i])
+                        @Html.HiddenFor(model => model.hotelprijzen[i])
+
+                    }
+                </tbody>
+            </table>
+            <div style="width:100%;">
+                <b>Te betalen: €@totaalprijs</b>
+                <input type="submit" style="float:right;" value="Betalen" class="btn btn-primary" />
+            </div>
+
+
+           
+                
+            
+        </div>
+    </div>
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        function DeleteRijInTabel(id)
+        {
+            console.log(id);
+            console.log("completed");
+            $("#"+id).remove();
+        }
+
+    </script>
+}

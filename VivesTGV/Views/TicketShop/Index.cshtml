@@ -1,0 +1,188 @@
+﻿@model VivesTGV.Models.TicketShopViewModels
+
+@{
+    ViewBag.Title = "Index";
+
+    
+
+    List<SelectListItem> vertrekitems = new List<SelectListItem>();
+    List<SelectListItem> aankomstitems = new List<SelectListItem>();
+    foreach (string s in Model.vertrek)//ddlVertrek vullen
+    {
+       
+        SelectListItem item = new SelectListItem();
+        item.Text = s;
+
+        if (item.Text.Equals(ViewBag.vertrek))
+        {
+            item.Selected = true;
+
+
+        }
+
+        vertrekitems.Add(item);
+
+    }
+    foreach (string s in Model.aankomst)//ddlAankomst vullen
+    {
+        System.Diagnostics.Debug.WriteLine(s);
+        SelectListItem item = new SelectListItem();
+        item.Text = s;
+
+        if (item.Text.Equals(ViewBag.aankomst))
+        {
+            item.Selected = true;
+        }
+
+        aankomstitems.Add(item);
+
+
+
+    }
+    
+
+}
+
+
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Treintickets bestellen</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.vertrek, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.vertrek,vertrekitems, new { htmlAttributes = new { @class = "form-control",@id="ddlVertrek" } })
+                @Html.ValidationMessageFor(model => model.vertrek, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.aankomst, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.aankomst,aankomstitems, new { htmlAttributes = new { @class = "form-control", @id = "ddlAankomst" } })
+                @Html.ValidationMessageFor(model => model.aankomst, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.vertrekdatum, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.vertrekdatum, new { htmlAttributes = new { @class = "form-control", @id = "txtVertrekdatum" } })
+                @Html.ValidationMessageFor(model => model.vertrekdatum, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.aantal, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.aantal, new { htmlAttributes = new { @class = "form-control", @id = "txtAantal" } })
+                @Html.ValidationMessageFor(model => model.aantal, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @if (Model.traject != null)
+        {
+            <div class="form-group">
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Van</th>
+                            <th>Naar</th>
+                            <th>Tijdstip vertrek</th>
+                            <th>Reistijd</th>
+                            <th>Prijs economicticket</th>
+                            <th>Prijs businessticket</th>
+
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>@ViewBag.vertrek</td>
+                        <td>@ViewBag.aankomst</td>
+                        <td>@Html.DisplayFor(model=>model.traject.Tijdsstip)</td>
+                        <td>@Html.DisplayFor(model => model.traject.Reistijd)</td>
+                        <td>€@Html.DisplayFor(model => model.traject.EconomicPrijs)</td>
+                        <td>€@Html.DisplayFor(model => model.traject.BusinessPrijs)</td>
+                        @Html.HiddenFor(model => model.traject.Aankomst)
+                        @Html.HiddenFor(model => model.traject.Vertrek)
+                        @Html.HiddenFor(model => Model.traject.TrajectID)
+
+                    </tr>
+                </table>
+
+            </div>
+        }
+
+        @if (Model.tussenstops!=null)
+        {
+            foreach (string s in Model.tussenstops)
+            {
+                <div class="form-group">
+
+                    Tussenstop in: @s
+
+                </div>
+            }
+        }
+
+        @for (int i = 0; i < Model.aantal; i++)
+        {
+            <div class="form-group">
+                @Html.Label("Voornaam en naam reiziger "+(i+1), htmlAttributes: new { @class = "control-label col-md-2" })
+
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.namen[i], new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.namen[i], "", new { @class = "text-danger" })
+                    @if (ViewBag.Economic != null)
+                    {
+                        @Html.Label("Economicklasse")
+                        @Html.RadioButtonFor(model => model.treinklassen[i], false)
+                    }
+                    else if (ViewBag.Business != null)
+                    {
+                        @Html.Label("Businessklasse")
+                        @Html.RadioButtonFor(model => model.treinklassen[i], true)
+                    }
+                    else
+                    {
+                        @Html.Label("Economicklasse")
+                        @Html.RadioButtonFor(model => model.treinklassen[i], false) 
+
+                         @Html.Label("Businessklasse")
+                        @Html.RadioButtonFor(model => model.treinklassen[i], true)
+                    }
+
+
+                </div>
+            </div>
+        }
+
+        <div id="targetID"></div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @if (Model.aantal == 0)
+                {
+                    <input type="submit" value="Zoeken" class="btn btn-primary" />
+                    <span class="text-danger">@ViewBag.errormsg</span>
+                }
+                else
+                {
+                    <input type="submit" value="Toevoegen aan winkelmand" class="btn btn-primary" />
+                }
+               
+            </div>
+        </div>
+    </div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Styles.Render("~/Content/themes/base/css")
+
+
+}

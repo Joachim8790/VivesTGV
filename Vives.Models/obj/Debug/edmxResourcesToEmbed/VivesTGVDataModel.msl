@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VivesTGVModelStoreContainer" CdmEntityContainer="VivesTGVEntities1">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="VivesTGVModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="VivesTGVModel.AspNetRoles">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="VivesTGVModel.AspNetUserClaims">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="VivesTGVModel.AspNetUserLogins">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="VivesTGVModel.AspNetUsers">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+          <ScalarProperty Name="Voornaam" ColumnName="Voornaam" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="VivesTGVModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblBestellijn">
+      <EntityTypeMapping TypeName="VivesTGVModel.tblBestellijn">
+        <MappingFragment StoreEntitySet="tblBestellijn">
+          <ScalarProperty Name="BestellijnID" ColumnName="BestellijnID" />
+          <ScalarProperty Name="BestellingID" ColumnName="BestellingID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGebruiker">
+      <EntityTypeMapping TypeName="VivesTGVModel.tblGebruiker">
+        <MappingFragment StoreEntitySet="tblGebruiker">
+          <ScalarProperty Name="GebruikersID" ColumnName="GebruikersID" />
+          <ScalarProperty Name="Voornaam" ColumnName="Voornaam" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+          <ScalarProperty Name="Emailadres" ColumnName="Emailadres" />
+          <ScalarProperty Name="Wachtwoord" ColumnName="Wachtwoord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHotel">
+      <EntityTypeMapping TypeName="VivesTGVModel.tblHotel">
+        <MappingFragment StoreEntitySet="tblHotel">
+          <ScalarProperty Name="HotelID" ColumnName="HotelID" />
+          <ScalarProperty Name="StadID" ColumnName="StadID" />
+          <ScalarProperty Name="PrijsPerOvernachting" ColumnName="PrijsPerOvernachting" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="HotelFoto" ColumnName="HotelFoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProduct">
+      <EntityTypeMapping TypeName="VivesTGVModel.tblProduct">
+        <MappingFragment StoreEntitySet="tblProduct">
+          <ScalarProperty Name="Treinklasse" ColumnName="Treinklasse" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="TrajectID" ColumnName="TrajectID" />
+          <ScalarProperty Name="HotelID" ColumnName="HotelID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStad">
+      <EntityTypeMapping TypeName="VivesTGVModel.tblStad">
+        <MappingFragment StoreEntitySet="tblStad">
+          <ScalarProperty Name="StadID" ColumnName="StadID" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTraject">
+      <EntityTypeMapping TypeName="VivesTGVModel.tblTraject">
+        <MappingFragment StoreEntitySet="tblTraject">
+          <ScalarProperty Name="TrajectID" ColumnName="TrajectID" />
+          <ScalarProperty Name="Vertrek" ColumnName="Vertrek" />
+          <ScalarProperty Name="Aankomst" ColumnName="Aankomst" />
+          <ScalarProperty Name="Tijdsstip" ColumnName="Tijdsstip" />
+          <ScalarProperty Name="Reistijd" ColumnName="Reistijd" />
+          <ScalarProperty Name="BusinessPlaatsen" ColumnName="BusinessPlaatsen" />
+          <ScalarProperty Name="EconomicPlaatsen" ColumnName="EconomicPlaatsen" />
+          <ScalarProperty Name="BusinessPrijs" ColumnName="BusinessPrijs" />
+          <ScalarProperty Name="EconomicPrijs" ColumnName="EconomicPrijs" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTussenlocatie">
+      <EntityTypeMapping TypeName="VivesTGVModel.tblTussenlocatie">
+        <MappingFragment StoreEntitySet="tblTussenlocatie">
+          <ScalarProperty Name="TrajectID" ColumnName="TrajectID" />
+          <ScalarProperty Name="Volgnummer" ColumnName="Volgnummer" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="VivesTGVModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="tblWinkelmandlijn">
+      <EntityTypeMapping TypeName="VivesTGVModel.tblWinkelmandlijn">
+        <MappingFragment StoreEntitySet="tblWinkelmandlijn">
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="GebruikersID" ColumnName="GebruikersID" />
+          <ScalarProperty Name="WinkelmandlijnID" ColumnName="WinkelmandlijnID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTreinplaats">
+      <EntityTypeMapping TypeName="VivesTGVModel.tblTreinplaats">
+        <MappingFragment StoreEntitySet="tblTreinplaats">
+          <ScalarProperty Name="Treinklasse" ColumnName="Treinklasse" />
+          <ScalarProperty Name="Plaatsnummer" ColumnName="Plaatsnummer" />
+          <ScalarProperty Name="BestellijnID" ColumnName="BestellijnID" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+          <ScalarProperty Name="TreinplaatsID" ColumnName="TreinplaatsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblBestelling">
+      <EntityTypeMapping TypeName="VivesTGVModel.tblBestelling">
+        <MappingFragment StoreEntitySet="tblBestelling">
+          <ScalarProperty Name="Geannuleerd" ColumnName="Geannuleerd" />
+          <ScalarProperty Name="Besteldatum" ColumnName="Besteldatum" />
+          <ScalarProperty Name="Vertrekdatum" ColumnName="Vertrekdatum" />
+          <ScalarProperty Name="GebruikersID" ColumnName="GebruikersID" />
+          <ScalarProperty Name="BestellingID" ColumnName="BestellingID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

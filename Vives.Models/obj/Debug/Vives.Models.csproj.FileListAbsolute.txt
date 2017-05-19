@@ -1,0 +1,10 @@
+S:\Web Development\VivesTGV\Vives.Models\bin\Debug\Vives.Models.dll.config
+S:\Web Development\VivesTGV\Vives.Models\bin\Debug\Vives.Models.dll
+S:\Web Development\VivesTGV\Vives.Models\bin\Debug\Vives.Models.pdb
+S:\Web Development\VivesTGV\Vives.Models\bin\Debug\EntityFramework.dll
+S:\Web Development\VivesTGV\Vives.Models\bin\Debug\EntityFramework.SqlServer.dll
+S:\Web Development\VivesTGV\Vives.Models\bin\Debug\EntityFramework.xml
+S:\Web Development\VivesTGV\Vives.Models\bin\Debug\EntityFramework.SqlServer.xml
+S:\Web Development\VivesTGV\Vives.Models\obj\Debug\Vives.Models.dll
+S:\Web Development\VivesTGV\Vives.Models\obj\Debug\Vives.Models.pdb
+S:\Web Development\VivesTGV\Vives.Models\obj\Debug\Vives.Models.csprojResolveAssemblyReference.cache

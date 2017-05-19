@@ -1,0 +1,12 @@
+S:\Web Development\VivesTGV\Vives.DAO\bin\Debug\Vives.DAO.dll.config
+S:\Web Development\VivesTGV\Vives.DAO\bin\Debug\Vives.DAO.dll
+S:\Web Development\VivesTGV\Vives.DAO\bin\Debug\Vives.DAO.pdb
+S:\Web Development\VivesTGV\Vives.DAO\bin\Debug\EntityFramework.dll
+S:\Web Development\VivesTGV\Vives.DAO\bin\Debug\EntityFramework.SqlServer.dll
+S:\Web Development\VivesTGV\Vives.DAO\bin\Debug\Vives.Models.dll
+S:\Web Development\VivesTGV\Vives.DAO\bin\Debug\Vives.Models.pdb
+S:\Web Development\VivesTGV\Vives.DAO\bin\Debug\EntityFramework.xml
+S:\Web Development\VivesTGV\Vives.DAO\bin\Debug\EntityFramework.SqlServer.xml
+S:\Web Development\VivesTGV\Vives.DAO\obj\Debug\Vives.DAO.csprojResolveAssemblyReference.cache
+S:\Web Development\VivesTGV\Vives.DAO\obj\Debug\Vives.DAO.dll
+S:\Web Development\VivesTGV\Vives.DAO\obj\Debug\Vives.DAO.pdb

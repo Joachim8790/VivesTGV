@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1 style="color:white;">Vives TGV</h1>
+    
+    @Html.ActionLink("Boek nu", "Index","TicketShop","",new { @class="btn btn-primary btn-lg"})"
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Log in</h2>
+        <p>
+            Door ons handig aanmeldsysteem kan je makkelijk een online treinticket boeken en het is ook handig om je bestellingen bij te houden.
+        </p>
+        @Html.ActionLink("Login", "Login", "Account", "", new { @class = "btn btn-primary" })
+    </div>
+    <div class="col-md-4">
+        <h2>Europa is onze stad</h2>
+        <p>Reis naar je lievelingsstad in Europa via de trein , Zo reis je goodkoop, veilig en je zal rap op je bestemming zijn. </p>
+        @Html.ActionLink("Boek nu", "Index", "TicketShop", "", new { @class = "btn btn-primary" })
+    </div>
+    <div class="col-md-4">
+        <h2>Over ons</h2>
+        <p>Wil je meer lezen over hoe het online systeem van VivesTGV werkt dan moet u op de onderstaande knop drukken.</p>
+        @Html.ActionLink("Lees meer", "About", "Home", "", new { @class = "btn btn-primary" })
+    </div>
+</div>

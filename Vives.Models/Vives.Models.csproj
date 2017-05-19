@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80FF87FC-5BF3-45BA-BE37-6A81F633B87A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vives.Models</RootNamespace>
+    <AssemblyName>Vives.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AspNetRoles.cs">
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaims.cs">
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogins.cs">
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUsers.cs">
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="C__MigrationHistory.cs">
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\Bestellingstatus.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblBestellijn.cs">
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblBestelling.cs">
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblGebruiker.cs">
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblHotel.cs">
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblProduct.cs">
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblStad.cs">
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblTraject.cs">
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblTreinplaats.cs">
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblTussenlocatie.cs">
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblWinkelmandlijn.cs">
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VivesTGVDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VivesTGVDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VivesTGVDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VivesTGVDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VivesTGVDataModel.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="bin\Debug\Vives.Models.dll.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\VivesTGVDataModel.csdl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\VivesTGVDataModel.msl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\VivesTGVDataModel.ssdl" />
+    <None Include="obj\Debug\Vives.Models.csprojResolveAssemblyReference.cache" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="VivesTGVDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>VivesTGVDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="VivesTGVDataModel.edmx.diagram">
+      <DependentUpon>VivesTGVDataModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\Vives.Models.dll" />
+    <Content Include="bin\Debug\Vives.Models.pdb" />
+    <Content Include="obj\Debug\TempPE\VivesTGVDataModel.cs.dll" />
+    <Content Include="obj\Debug\TempPE\VivesTGVDataModel.Designer.cs.dll" />
+    <Content Include="obj\Debug\Vives.Models.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Vives.Models.dll" />
+    <Content Include="obj\Debug\Vives.Models.pdb" />
+    <Content Include="VivesTGVDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VivesTGVDataModel.edmx</DependentUpon>
+      <LastGenOutput>VivesTGVDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="VivesTGVDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VivesTGVDataModel.edmx</DependentUpon>
+      <LastGenOutput>VivesTGVDataModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
