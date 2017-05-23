@@ -41,5 +41,6 @@ namespace Vives.Models
         public virtual DbSet<tblTussenlocatie> tblTussenlocatie { get; set; }
         public virtual DbSet<tblWinkelmandlijn> tblWinkelmandlijn { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
     }
 }
