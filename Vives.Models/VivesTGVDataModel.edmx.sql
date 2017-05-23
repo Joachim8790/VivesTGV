@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/23/2017 14:50:06
+-- Date Created: 05/23/2017 17:37:33
 -- Generated from EDMX file: C:\Users\joach\Source\Repos\VivesTGV2\Vives.Models\VivesTGVDataModel.edmx
 -- --------------------------------------------------
 
@@ -23,11 +23,11 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[AspNetUserLogins] DROP CONSTRAINT [FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId];
 GO
-IF OBJECT_ID(N'[dbo].[FK_tblBestelling_AspNetUsers]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[tblBestelling] DROP CONSTRAINT [FK_tblBestelling_AspNetUsers];
+IF OBJECT_ID(N'[dbo].[FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[AspNetUserRoles] DROP CONSTRAINT [FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId];
 GO
-IF OBJECT_ID(N'[dbo].[FK_tblWinkelmandlijn_AspNetUsers]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[tblWinkelmandlijn] DROP CONSTRAINT [FK_tblWinkelmandlijn_AspNetUsers];
+IF OBJECT_ID(N'[dbo].[FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[AspNetUserRoles] DROP CONSTRAINT [FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId];
 GO
 IF OBJECT_ID(N'[dbo].[FK_tblBestellijn_tblBesteling]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[tblBestellijn] DROP CONSTRAINT [FK_tblBestellijn_tblBesteling];
@@ -35,8 +35,8 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_tblBestellijn_tblProduct]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[tblBestellijn] DROP CONSTRAINT [FK_tblBestellijn_tblProduct];
 GO
-IF OBJECT_ID(N'[dbo].[FK_tblTreinplaats_tblBestellijn]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[tblTreinplaats] DROP CONSTRAINT [FK_tblTreinplaats_tblBestellijn];
+IF OBJECT_ID(N'[dbo].[FK_tblBestelling_AspNetUsers]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[tblBestelling] DROP CONSTRAINT [FK_tblBestelling_AspNetUsers];
 GO
 IF OBJECT_ID(N'[dbo].[FK_tblHotel_tblStad]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[tblHotel] DROP CONSTRAINT [FK_tblHotel_tblStad];
@@ -47,31 +47,31 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_tblProduct_tblTraject]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[tblProduct] DROP CONSTRAINT [FK_tblProduct_tblTraject];
 GO
-IF OBJECT_ID(N'[dbo].[FK_tblWinkelmand_tblProduct]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[tblWinkelmandlijn] DROP CONSTRAINT [FK_tblWinkelmand_tblProduct];
-GO
 IF OBJECT_ID(N'[dbo].[FK_tblTraject_tblStadAankomst]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[tblTraject] DROP CONSTRAINT [FK_tblTraject_tblStadAankomst];
 GO
 IF OBJECT_ID(N'[dbo].[FK_tblTraject_tblStadVertrek]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[tblTraject] DROP CONSTRAINT [FK_tblTraject_tblStadVertrek];
 GO
+IF OBJECT_ID(N'[dbo].[FK_tblTreinplaats_tblBestellijn]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[tblTreinplaats] DROP CONSTRAINT [FK_tblTreinplaats_tblBestellijn];
+GO
 IF OBJECT_ID(N'[dbo].[FK_tblTussenlocatie_tblTraject]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[tblTussenlocatie] DROP CONSTRAINT [FK_tblTussenlocatie_tblTraject];
 GO
-IF OBJECT_ID(N'[dbo].[FK_AspNetUserRoles_AspNetRoles]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[AspNetUserRoles] DROP CONSTRAINT [FK_AspNetUserRoles_AspNetRoles];
+IF OBJECT_ID(N'[dbo].[FK_tblWinkelmand_tblProduct]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[tblWinkelmandlijn] DROP CONSTRAINT [FK_tblWinkelmand_tblProduct];
 GO
-IF OBJECT_ID(N'[dbo].[FK_AspNetUserRoles_AspNetUsers]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[AspNetUserRoles] DROP CONSTRAINT [FK_AspNetUserRoles_AspNetUsers];
+IF OBJECT_ID(N'[dbo].[FK_tblWinkelmandlijn_AspNetUsers]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[tblWinkelmandlijn] DROP CONSTRAINT [FK_tblWinkelmandlijn_AspNetUsers];
 GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[C__MigrationHistory]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[C__MigrationHistory];
+IF OBJECT_ID(N'[dbo].[__MigrationHistory]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[__MigrationHistory];
 GO
 IF OBJECT_ID(N'[dbo].[AspNetRoles]', 'U') IS NOT NULL
     DROP TABLE [dbo].[AspNetRoles];
@@ -82,8 +82,14 @@ GO
 IF OBJECT_ID(N'[dbo].[AspNetUserLogins]', 'U') IS NOT NULL
     DROP TABLE [dbo].[AspNetUserLogins];
 GO
+IF OBJECT_ID(N'[dbo].[AspNetUserRoles]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[AspNetUserRoles];
+GO
 IF OBJECT_ID(N'[dbo].[AspNetUsers]', 'U') IS NOT NULL
     DROP TABLE [dbo].[AspNetUsers];
+GO
+IF OBJECT_ID(N'[dbo].[sysdiagrams]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[sysdiagrams];
 GO
 IF OBJECT_ID(N'[dbo].[tblBestellijn]', 'U') IS NOT NULL
     DROP TABLE [dbo].[tblBestellijn];
@@ -114,15 +120,6 @@ IF OBJECT_ID(N'[dbo].[tblTussenlocatie]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[tblWinkelmandlijn]', 'U') IS NOT NULL
     DROP TABLE [dbo].[tblWinkelmandlijn];
-GO
-IF OBJECT_ID(N'[dbo].[sysdiagrams]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[sysdiagrams];
-GO
-IF OBJECT_ID(N'[dbo].[database_firewall_rules]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[database_firewall_rules];
-GO
-IF OBJECT_ID(N'[dbo].[AspNetUserRoles]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[AspNetUserRoles];
 GO
 
 -- --------------------------------------------------
@@ -181,21 +178,21 @@ CREATE TABLE [dbo].[AspNetUsers] (
 );
 GO
 
+-- Creating table 'sysdiagrams'
+CREATE TABLE [dbo].[sysdiagrams] (
+    [name] nvarchar(128)  NOT NULL,
+    [principal_id] int  NOT NULL,
+    [diagram_id] int IDENTITY(1,1) NOT NULL,
+    [version] int  NULL,
+    [definition] varbinary(max)  NULL
+);
+GO
+
 -- Creating table 'tblBestellijn'
 CREATE TABLE [dbo].[tblBestellijn] (
     [BestellijnID] int IDENTITY(1,1) NOT NULL,
     [BestellingID] int  NOT NULL,
     [ProductID] int  NOT NULL
-);
-GO
-
--- Creating table 'tblBestelling'
-CREATE TABLE [dbo].[tblBestelling] (
-    [BestellingID] int IDENTITY(1,1) NOT NULL,
-    [GebruikersID] nvarchar(128)  NOT NULL,
-    [Vertrekdatum] datetime  NOT NULL,
-    [Besteldatum] datetime  NOT NULL,
-    [Geannuleerd] tinyint  NOT NULL
 );
 GO
 
@@ -250,16 +247,6 @@ CREATE TABLE [dbo].[tblTraject] (
 );
 GO
 
--- Creating table 'tblTreinplaats'
-CREATE TABLE [dbo].[tblTreinplaats] (
-    [TreinplaatsID] int IDENTITY(1,1) NOT NULL,
-    [Naam] nvarchar(50)  NOT NULL,
-    [BestellijnID] int  NOT NULL,
-    [Plaatsnummer] int  NOT NULL,
-    [Treinklasse] tinyint  NOT NULL
-);
-GO
-
 -- Creating table 'tblTussenlocatie'
 CREATE TABLE [dbo].[tblTussenlocatie] (
     [TrajectID] int  NOT NULL,
@@ -278,24 +265,33 @@ CREATE TABLE [dbo].[tblWinkelmandlijn] (
 );
 GO
 
--- Creating table 'sysdiagrams'
-CREATE TABLE [dbo].[sysdiagrams] (
+-- Creating table 'tblTreinplaats'
+CREATE TABLE [dbo].[tblTreinplaats] (
+    [TreinplaatsID] int IDENTITY(1,1) NOT NULL,
+    [Naam] nvarchar(50)  NOT NULL,
+    [BestellijnID] int  NOT NULL,
+    [Plaatsnummer] int  NOT NULL,
+    [Treinklasse] tinyint  NOT NULL
+);
+GO
+
+-- Creating table 'tblBestelling'
+CREATE TABLE [dbo].[tblBestelling] (
+    [BestellingID] int IDENTITY(1,1) NOT NULL,
+    [GebruikersID] nvarchar(128)  NOT NULL,
+    [Vertrekdatum] datetime  NOT NULL,
+    [Besteldatum] datetime  NOT NULL,
+    [Geannuleerd] tinyint  NOT NULL
+);
+GO
+
+-- Creating table 'sysdiagrams1Set'
+CREATE TABLE [dbo].[sysdiagrams1Set] (
     [name] nvarchar(128)  NOT NULL,
     [principal_id] int  NOT NULL,
     [diagram_id] int IDENTITY(1,1) NOT NULL,
     [version] int  NULL,
     [definition] varbinary(max)  NULL
-);
-GO
-
--- Creating table 'database_firewall_rules'
-CREATE TABLE [dbo].[database_firewall_rules] (
-    [id] int IDENTITY(1,1) NOT NULL,
-    [name] nvarchar(128)  NOT NULL,
-    [start_ip_address] varchar(45)  NOT NULL,
-    [end_ip_address] varchar(45)  NOT NULL,
-    [create_date] datetime  NOT NULL,
-    [modify_date] datetime  NOT NULL
 );
 GO
 
@@ -340,16 +336,16 @@ ADD CONSTRAINT [PK_AspNetUsers]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
+-- Creating primary key on [diagram_id] in table 'sysdiagrams'
+ALTER TABLE [dbo].[sysdiagrams]
+ADD CONSTRAINT [PK_sysdiagrams]
+    PRIMARY KEY CLUSTERED ([diagram_id] ASC);
+GO
+
 -- Creating primary key on [BestellijnID] in table 'tblBestellijn'
 ALTER TABLE [dbo].[tblBestellijn]
 ADD CONSTRAINT [PK_tblBestellijn]
     PRIMARY KEY CLUSTERED ([BestellijnID] ASC);
-GO
-
--- Creating primary key on [BestellingID] in table 'tblBestelling'
-ALTER TABLE [dbo].[tblBestelling]
-ADD CONSTRAINT [PK_tblBestelling]
-    PRIMARY KEY CLUSTERED ([BestellingID] ASC);
 GO
 
 -- Creating primary key on [GebruikersID] in table 'tblGebruiker'
@@ -382,12 +378,6 @@ ADD CONSTRAINT [PK_tblTraject]
     PRIMARY KEY CLUSTERED ([TrajectID] ASC);
 GO
 
--- Creating primary key on [TreinplaatsID] in table 'tblTreinplaats'
-ALTER TABLE [dbo].[tblTreinplaats]
-ADD CONSTRAINT [PK_tblTreinplaats]
-    PRIMARY KEY CLUSTERED ([TreinplaatsID] ASC);
-GO
-
 -- Creating primary key on [TrajectID], [Volgnummer] in table 'tblTussenlocatie'
 ALTER TABLE [dbo].[tblTussenlocatie]
 ADD CONSTRAINT [PK_tblTussenlocatie]
@@ -400,16 +390,22 @@ ADD CONSTRAINT [PK_tblWinkelmandlijn]
     PRIMARY KEY CLUSTERED ([WinkelmandlijnID] ASC);
 GO
 
--- Creating primary key on [diagram_id] in table 'sysdiagrams'
-ALTER TABLE [dbo].[sysdiagrams]
-ADD CONSTRAINT [PK_sysdiagrams]
-    PRIMARY KEY CLUSTERED ([diagram_id] ASC);
+-- Creating primary key on [TreinplaatsID] in table 'tblTreinplaats'
+ALTER TABLE [dbo].[tblTreinplaats]
+ADD CONSTRAINT [PK_tblTreinplaats]
+    PRIMARY KEY CLUSTERED ([TreinplaatsID] ASC);
 GO
 
--- Creating primary key on [id], [name], [start_ip_address], [end_ip_address], [create_date], [modify_date] in table 'database_firewall_rules'
-ALTER TABLE [dbo].[database_firewall_rules]
-ADD CONSTRAINT [PK_database_firewall_rules]
-    PRIMARY KEY CLUSTERED ([id], [name], [start_ip_address], [end_ip_address], [create_date], [modify_date] ASC);
+-- Creating primary key on [BestellingID] in table 'tblBestelling'
+ALTER TABLE [dbo].[tblBestelling]
+ADD CONSTRAINT [PK_tblBestelling]
+    PRIMARY KEY CLUSTERED ([BestellingID] ASC);
+GO
+
+-- Creating primary key on [diagram_id] in table 'sysdiagrams1Set'
+ALTER TABLE [dbo].[sysdiagrams1Set]
+ADD CONSTRAINT [PK_sysdiagrams1Set]
+    PRIMARY KEY CLUSTERED ([diagram_id] ASC);
 GO
 
 -- Creating primary key on [AspNetRoles_Id], [AspNetUsers_Id] in table 'AspNetUserRoles'
@@ -452,51 +448,6 @@ ON [dbo].[AspNetUserLogins]
     ([UserId]);
 GO
 
--- Creating foreign key on [GebruikersID] in table 'tblBestelling'
-ALTER TABLE [dbo].[tblBestelling]
-ADD CONSTRAINT [FK_tblBestelling_AspNetUsers]
-    FOREIGN KEY ([GebruikersID])
-    REFERENCES [dbo].[AspNetUsers]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_tblBestelling_AspNetUsers'
-CREATE INDEX [IX_FK_tblBestelling_AspNetUsers]
-ON [dbo].[tblBestelling]
-    ([GebruikersID]);
-GO
-
--- Creating foreign key on [GebruikersID] in table 'tblWinkelmandlijn'
-ALTER TABLE [dbo].[tblWinkelmandlijn]
-ADD CONSTRAINT [FK_tblWinkelmandlijn_AspNetUsers]
-    FOREIGN KEY ([GebruikersID])
-    REFERENCES [dbo].[AspNetUsers]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_tblWinkelmandlijn_AspNetUsers'
-CREATE INDEX [IX_FK_tblWinkelmandlijn_AspNetUsers]
-ON [dbo].[tblWinkelmandlijn]
-    ([GebruikersID]);
-GO
-
--- Creating foreign key on [BestellingID] in table 'tblBestellijn'
-ALTER TABLE [dbo].[tblBestellijn]
-ADD CONSTRAINT [FK_tblBestellijn_tblBesteling]
-    FOREIGN KEY ([BestellingID])
-    REFERENCES [dbo].[tblBestelling]
-        ([BestellingID])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_tblBestellijn_tblBesteling'
-CREATE INDEX [IX_FK_tblBestellijn_tblBesteling]
-ON [dbo].[tblBestellijn]
-    ([BestellingID]);
-GO
-
 -- Creating foreign key on [ProductID] in table 'tblBestellijn'
 ALTER TABLE [dbo].[tblBestellijn]
 ADD CONSTRAINT [FK_tblBestellijn_tblProduct]
@@ -510,21 +461,6 @@ GO
 CREATE INDEX [IX_FK_tblBestellijn_tblProduct]
 ON [dbo].[tblBestellijn]
     ([ProductID]);
-GO
-
--- Creating foreign key on [BestellijnID] in table 'tblTreinplaats'
-ALTER TABLE [dbo].[tblTreinplaats]
-ADD CONSTRAINT [FK_tblTreinplaats_tblBestellijn]
-    FOREIGN KEY ([BestellijnID])
-    REFERENCES [dbo].[tblBestellijn]
-        ([BestellijnID])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_tblTreinplaats_tblBestellijn'
-CREATE INDEX [IX_FK_tblTreinplaats_tblBestellijn]
-ON [dbo].[tblTreinplaats]
-    ([BestellijnID]);
 GO
 
 -- Creating foreign key on [StadID] in table 'tblHotel'
@@ -570,21 +506,6 @@ GO
 CREATE INDEX [IX_FK_tblProduct_tblTraject]
 ON [dbo].[tblProduct]
     ([TrajectID]);
-GO
-
--- Creating foreign key on [ProductID] in table 'tblWinkelmandlijn'
-ALTER TABLE [dbo].[tblWinkelmandlijn]
-ADD CONSTRAINT [FK_tblWinkelmand_tblProduct]
-    FOREIGN KEY ([ProductID])
-    REFERENCES [dbo].[tblProduct]
-        ([ProductID])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_tblWinkelmand_tblProduct'
-CREATE INDEX [IX_FK_tblWinkelmand_tblProduct]
-ON [dbo].[tblWinkelmandlijn]
-    ([ProductID]);
 GO
 
 -- Creating foreign key on [Aankomst] in table 'tblTraject'
@@ -648,6 +569,81 @@ GO
 CREATE INDEX [IX_FK_AspNetUserRoles_AspNetUsers]
 ON [dbo].[AspNetUserRoles]
     ([AspNetUsers_Id]);
+GO
+
+-- Creating foreign key on [GebruikersID] in table 'tblWinkelmandlijn'
+ALTER TABLE [dbo].[tblWinkelmandlijn]
+ADD CONSTRAINT [FK_tblWinkelmandlijn_AspNetUsers]
+    FOREIGN KEY ([GebruikersID])
+    REFERENCES [dbo].[AspNetUsers]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_tblWinkelmandlijn_AspNetUsers'
+CREATE INDEX [IX_FK_tblWinkelmandlijn_AspNetUsers]
+ON [dbo].[tblWinkelmandlijn]
+    ([GebruikersID]);
+GO
+
+-- Creating foreign key on [ProductID] in table 'tblWinkelmandlijn'
+ALTER TABLE [dbo].[tblWinkelmandlijn]
+ADD CONSTRAINT [FK_tblWinkelmand_tblProduct]
+    FOREIGN KEY ([ProductID])
+    REFERENCES [dbo].[tblProduct]
+        ([ProductID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_tblWinkelmand_tblProduct'
+CREATE INDEX [IX_FK_tblWinkelmand_tblProduct]
+ON [dbo].[tblWinkelmandlijn]
+    ([ProductID]);
+GO
+
+-- Creating foreign key on [BestellijnID] in table 'tblTreinplaats'
+ALTER TABLE [dbo].[tblTreinplaats]
+ADD CONSTRAINT [FK_tblTreinplaats_tblBestellijn]
+    FOREIGN KEY ([BestellijnID])
+    REFERENCES [dbo].[tblBestellijn]
+        ([BestellijnID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_tblTreinplaats_tblBestellijn'
+CREATE INDEX [IX_FK_tblTreinplaats_tblBestellijn]
+ON [dbo].[tblTreinplaats]
+    ([BestellijnID]);
+GO
+
+-- Creating foreign key on [GebruikersID] in table 'tblBestelling'
+ALTER TABLE [dbo].[tblBestelling]
+ADD CONSTRAINT [FK_tblBestelling_AspNetUsers]
+    FOREIGN KEY ([GebruikersID])
+    REFERENCES [dbo].[AspNetUsers]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_tblBestelling_AspNetUsers'
+CREATE INDEX [IX_FK_tblBestelling_AspNetUsers]
+ON [dbo].[tblBestelling]
+    ([GebruikersID]);
+GO
+
+-- Creating foreign key on [BestellingID] in table 'tblBestellijn'
+ALTER TABLE [dbo].[tblBestellijn]
+ADD CONSTRAINT [FK_tblBestellijn_tblBesteling]
+    FOREIGN KEY ([BestellingID])
+    REFERENCES [dbo].[tblBestelling]
+        ([BestellingID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_tblBestellijn_tblBesteling'
+CREATE INDEX [IX_FK_tblBestellijn_tblBesteling]
+ON [dbo].[tblBestellijn]
+    ([BestellingID]);
 GO
 
 -- --------------------------------------------------

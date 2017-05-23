@@ -14,7 +14,7 @@ namespace Vives.DAO
         
         public int addTreinplaats(tblTreinplaats treinplaats)
         {
-            using (var db = new VivesTGVEntities())
+            using (var db = new VivesTGVEntities1())
             {
                 db.tblTreinplaats.Add(treinplaats);
                 db.SaveChanges();
@@ -24,7 +24,7 @@ namespace Vives.DAO
         //verwijder treinplaats
         public void deleteTreinplaats(tblTreinplaats treinplaats)
         {
-            using (var db = new VivesTGVEntities())
+            using (var db = new VivesTGVEntities1())
             {
                 db.tblTreinplaats.Remove(treinplaats);
             }
@@ -33,7 +33,7 @@ namespace Vives.DAO
         //geef het aantal treinplaatsen per bestellijn
         public int getAantalTreinplaatsenPerBestellijn(tblBestellijn bestellijn)
         {
-            using (var db = new VivesTGVEntities())
+            using (var db = new VivesTGVEntities1())
             {
                 return db.tblTreinplaats.Where(a => a.BestellijnID == bestellijn.BestellijnID).Count();
             }
@@ -41,7 +41,7 @@ namespace Vives.DAO
         //zoek een treinplaats
         public tblTreinplaats getTreinplaats(int ID)
         {
-            using (var db = new VivesTGVEntities())
+            using (var db = new VivesTGVEntities1())
             {
                 return db.tblTreinplaats.Where(a => a.TreinplaatsID == ID).FirstOrDefault();
             }

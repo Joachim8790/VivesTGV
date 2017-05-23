@@ -25,7 +25,7 @@ namespace VivesTGV.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("VivesTGVEntities", throwIfV1Schema: false)
+            : base("VivesTGV", throwIfV1Schema: false)
         {
         }
 

@@ -241,6 +241,14 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-VivesTGV-20170503042308.mdf" />
+    <Content Include="App_Data\aspnet-VivesTGV-20170503042308_log.ldf">
+      <DependentUpon>aspnet-VivesTGV-20170503042308.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\ASPNETDB.MDF" />
+    <Content Include="App_Data\aspnetdb_log.ldf">
+      <DependentUpon>ASPNETDB.MDF</DependentUpon>
+    </Content>
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
     <Content Include="bin\EntityFramework.dll" />
@@ -462,9 +470,7 @@
     <Content Include="Views\Winkelmand\Index.cshtml" />
     <Content Include="Views\Bestellinghistoriek\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

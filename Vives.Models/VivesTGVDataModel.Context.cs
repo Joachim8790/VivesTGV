@@ -13,10 +13,10 @@ namespace Vives.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class VivesTGVEntities : DbContext
+    public partial class VivesTGVEntities1 : DbContext
     {
-        public VivesTGVEntities()
-            : base("name=VivesTGVEntities")
+        public VivesTGVEntities1()
+            : base("name=VivesTGVEntities1")
         {
         }
     
@@ -30,19 +30,17 @@ namespace Vives.Models
         public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
         public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
-        public virtual DbSet<C__MigrationHistory1> C__MigrationHistory1 { get; set; }
-        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<tblBestellijn> tblBestellijn { get; set; }
-        public virtual DbSet<tblBestelling> tblBestelling { get; set; }
         public virtual DbSet<tblGebruiker> tblGebruiker { get; set; }
         public virtual DbSet<tblHotel> tblHotel { get; set; }
         public virtual DbSet<tblProduct> tblProduct { get; set; }
         public virtual DbSet<tblStad> tblStad { get; set; }
         public virtual DbSet<tblTraject> tblTraject { get; set; }
-        public virtual DbSet<tblTreinplaats> tblTreinplaats { get; set; }
         public virtual DbSet<tblTussenlocatie> tblTussenlocatie { get; set; }
         public virtual DbSet<tblWinkelmandlijn> tblWinkelmandlijn { get; set; }
-        public virtual DbSet<database_firewall_rules1> database_firewall_rules1 { get; set; }
+        public virtual DbSet<tblTreinplaats> tblTreinplaats { get; set; }
+        public virtual DbSet<tblBestelling> tblBestelling { get; set; }
+        public virtual DbSet<sysdiagrams1> sysdiagrams1Set { get; set; }
     }
 }

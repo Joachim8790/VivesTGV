@@ -13,7 +13,7 @@ namespace Vives.DAO
         //krijg alle namen van alle steden
         public IEnumerable<string> getSteden()
         {
-            using (var db = new VivesTGVEntities())
+            using (var db = new VivesTGVEntities1())
             {
                 return db.tblStad.Select(a =>a.Naam).ToList();
             }
@@ -21,7 +21,7 @@ namespace Vives.DAO
         //Zoek een stad 
         public tblStad getStad(int ID)
         {
-            using (var db = new VivesTGVEntities())
+            using (var db = new VivesTGVEntities1())
             {
                 return db.tblStad.Where(a => a.StadID == ID).FirstOrDefault();
             }

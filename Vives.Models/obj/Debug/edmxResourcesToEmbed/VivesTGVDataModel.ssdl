@@ -1,30 +1,114 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="VivesTGVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="__MigrationHistory">
+<Schema Namespace="VivesTGVModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="VivesTGVModelStoreContainer">
+    <EntitySet Name="C__MigrationHistory" EntityType="VivesTGVModel.Store.C__MigrationHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetRoles" EntityType="VivesTGVModel.Store.AspNetRoles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUserClaims" EntityType="VivesTGVModel.Store.AspNetUserClaims" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUserLogins" EntityType="VivesTGVModel.Store.AspNetUserLogins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUsers" EntityType="VivesTGVModel.Store.AspNetUsers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="VivesTGVModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblBestellijn" EntityType="VivesTGVModel.Store.tblBestellijn" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblGebruiker" EntityType="VivesTGVModel.Store.tblGebruiker" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblHotel" EntityType="VivesTGVModel.Store.tblHotel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblProduct" EntityType="VivesTGVModel.Store.tblProduct" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblStad" EntityType="VivesTGVModel.Store.tblStad" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblTraject" EntityType="VivesTGVModel.Store.tblTraject" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblTussenlocatie" EntityType="VivesTGVModel.Store.tblTussenlocatie" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblWinkelmandlijn" EntityType="VivesTGVModel.Store.tblWinkelmandlijn" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblTreinplaats" EntityType="VivesTGVModel.Store.tblTreinplaats" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblBestelling" EntityType="VivesTGVModel.Store.tblBestelling" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams1Set" EntityType="VivesTGVModel.Store.sysdiagrams1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUserRoles" EntityType="VivesTGVModel.Store.AspNetUserRoles" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="VivesTGVModel.Store.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="VivesTGVModel.Store.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblBestellijn_tblProduct" Association="VivesTGVModel.Store.FK_tblBestellijn_tblProduct">
+      <End Role="tblProduct" EntitySet="tblProduct" />
+      <End Role="tblBestellijn" EntitySet="tblBestellijn" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblHotel_tblStad" Association="VivesTGVModel.Store.FK_tblHotel_tblStad">
+      <End Role="tblStad" EntitySet="tblStad" />
+      <End Role="tblHotel" EntitySet="tblHotel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProduct_tblHotel" Association="VivesTGVModel.Store.FK_tblProduct_tblHotel">
+      <End Role="tblHotel" EntitySet="tblHotel" />
+      <End Role="tblProduct" EntitySet="tblProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProduct_tblTraject" Association="VivesTGVModel.Store.FK_tblProduct_tblTraject">
+      <End Role="tblTraject" EntitySet="tblTraject" />
+      <End Role="tblProduct" EntitySet="tblProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTraject_tblStadAankomst" Association="VivesTGVModel.Store.FK_tblTraject_tblStadAankomst">
+      <End Role="tblStad" EntitySet="tblStad" />
+      <End Role="tblTraject" EntitySet="tblTraject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTraject_tblStadVertrek" Association="VivesTGVModel.Store.FK_tblTraject_tblStadVertrek">
+      <End Role="tblStad" EntitySet="tblStad" />
+      <End Role="tblTraject" EntitySet="tblTraject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTussenlocatie_tblTraject" Association="VivesTGVModel.Store.FK_tblTussenlocatie_tblTraject">
+      <End Role="tblTraject" EntitySet="tblTraject" />
+      <End Role="tblTussenlocatie" EntitySet="tblTussenlocatie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserRoles_AspNetRoles" Association="VivesTGVModel.Store.FK_AspNetUserRoles_AspNetRoles">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserRoles_AspNetUsers" Association="VivesTGVModel.Store.FK_AspNetUserRoles_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblWinkelmandlijn_AspNetUsers" Association="VivesTGVModel.Store.FK_tblWinkelmandlijn_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="tblWinkelmandlijn" EntitySet="tblWinkelmandlijn" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblWinkelmand_tblProduct" Association="VivesTGVModel.Store.FK_tblWinkelmand_tblProduct">
+      <End Role="tblProduct" EntitySet="tblProduct" />
+      <End Role="tblWinkelmandlijn" EntitySet="tblWinkelmandlijn" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTreinplaats_tblBestellijn" Association="VivesTGVModel.Store.FK_tblTreinplaats_tblBestellijn">
+      <End Role="tblBestellijn" EntitySet="tblBestellijn" />
+      <End Role="tblTreinplaats" EntitySet="tblTreinplaats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblBestelling_AspNetUsers" Association="VivesTGVModel.Store.FK_tblBestelling_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="tblBestelling" EntitySet="tblBestelling" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblBestellijn_tblBesteling" Association="VivesTGVModel.Store.FK_tblBestellijn_tblBesteling">
+      <End Role="tblBestelling" EntitySet="tblBestelling" />
+      <End Role="tblBestellijn" EntitySet="tblBestellijn" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="C__MigrationHistory">
     <Key>
       <PropertyRef Name="MigrationId" />
       <PropertyRef Name="ContextKey" />
     </Key>
-    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
-    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="MigrationId" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="ContextKey" Type="nvarchar" Nullable="false" MaxLength="300" />
     <Property Name="Model" Type="varbinary(max)" Nullable="false" />
-    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" Nullable="false" MaxLength="32" />
   </EntityType>
   <EntityType Name="AspNetRoles">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
   </EntityType>
   <EntityType Name="AspNetUserClaims">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="ClaimType" Type="nvarchar(max)" />
-    <Property Name="ClaimValue" Type="nvarchar(max)" />
+    <Property Name="UserId" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="ClaimType" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
   <EntityType Name="AspNetUserLogins">
     <Key>
@@ -32,46 +116,38 @@
       <PropertyRef Name="ProviderKey" />
       <PropertyRef Name="UserId" />
     </Key>
-    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
-  </EntityType>
-  <EntityType Name="AspNetUserRoles">
-    <Key>
-      <PropertyRef Name="UserId" />
-      <PropertyRef Name="RoleId" />
-    </Key>
-    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="LoginProvider" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="ProviderKey" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="UserId" Type="nvarchar" Nullable="false" MaxLength="128" />
   </EntityType>
   <EntityType Name="AspNetUsers">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Email" Type="nvarchar" Nullable="true" MaxLength="256" />
     <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
-    <Property Name="PasswordHash" Type="nvarchar(max)" />
-    <Property Name="SecurityStamp" Type="nvarchar(max)" />
-    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" Nullable="true" />
     <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
     <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
-    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" Nullable="true" />
     <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
     <Property Name="AccessFailedCount" Type="int" Nullable="false" />
-    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
-    <Property Name="Voornaam" Type="nvarchar(max)" />
-    <Property Name="Naam" Type="nvarchar(max)" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="Voornaam" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Naam" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="diagram_id" />
     </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
     <Property Name="principal_id" Type="int" Nullable="false" />
     <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
+    <Property Name="version" Type="int" Nullable="true" />
+    <Property Name="definition" Type="varbinary(max)" Nullable="true" />
   </EntityType>
   <EntityType Name="tblBestellijn">
     <Key>
@@ -81,25 +157,15 @@
     <Property Name="BestellingID" Type="int" Nullable="false" />
     <Property Name="ProductID" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="tblBestelling">
-    <Key>
-      <PropertyRef Name="BestellingID" />
-    </Key>
-    <Property Name="BestellingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="GebruikersID" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="Vertrekdatum" Type="date" Nullable="false" />
-    <Property Name="Besteldatum" Type="date" Nullable="false" />
-    <Property Name="Geannuleerd" Type="tinyint" Nullable="false" />
-  </EntityType>
   <EntityType Name="tblGebruiker">
     <Key>
       <PropertyRef Name="GebruikersID" />
     </Key>
-    <Property Name="GebruikersID" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="Voornaam" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="Naam" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="Emailadres" Type="nvarchar" MaxLength="250" Nullable="false" />
-    <Property Name="Wachtwoord" Type="nvarchar" MaxLength="70" Nullable="false" />
+    <Property Name="GebruikersID" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Voornaam" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Naam" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Emailadres" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Wachtwoord" Type="nvarchar" Nullable="false" MaxLength="70" />
   </EntityType>
   <EntityType Name="tblHotel">
     <Key>
@@ -108,25 +174,25 @@
     <Property Name="HotelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="StadID" Type="int" Nullable="false" />
     <Property Name="PrijsPerOvernachting" Type="float" Nullable="false" />
-    <Property Name="Naam" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="Adres" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="HotelFoto" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Naam" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Adres" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="HotelFoto" Type="nvarchar" Nullable="false" MaxLength="250" />
   </EntityType>
   <EntityType Name="tblProduct">
     <Key>
       <PropertyRef Name="ProductID" />
     </Key>
     <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TrajectID" Type="int" />
-    <Property Name="HotelID" Type="int" />
-    <Property Name="Treinklasse" Type="tinyint" />
+    <Property Name="TrajectID" Type="int" Nullable="true" />
+    <Property Name="HotelID" Type="int" Nullable="true" />
+    <Property Name="Treinklasse" Type="tinyint" Nullable="true" />
   </EntityType>
   <EntityType Name="tblStad">
     <Key>
       <PropertyRef Name="StadID" />
     </Key>
     <Property Name="StadID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Naam" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Naam" Type="nvarchar" Nullable="false" MaxLength="50" />
   </EntityType>
   <EntityType Name="tblTraject">
     <Key>
@@ -135,22 +201,12 @@
     <Property Name="TrajectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Vertrek" Type="int" Nullable="false" />
     <Property Name="Aankomst" Type="int" Nullable="false" />
-    <Property Name="Tijdsstip" Type="time" Precision="7" Nullable="false" />
-    <Property Name="Reistijd" Type="time" Precision="7" Nullable="false" />
+    <Property Name="Tijdsstip" Type="time" Nullable="false" Precision="7" />
+    <Property Name="Reistijd" Type="time" Nullable="false" Precision="7" />
     <Property Name="BusinessPlaatsen" Type="int" Nullable="false" />
     <Property Name="EconomicPlaatsen" Type="int" Nullable="false" />
     <Property Name="BusinessPrijs" Type="float" Nullable="false" />
     <Property Name="EconomicPrijs" Type="float" Nullable="false" />
-  </EntityType>
-  <EntityType Name="tblTreinplaats">
-    <Key>
-      <PropertyRef Name="TreinplaatsID" />
-    </Key>
-    <Property Name="TreinplaatsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Naam" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="BestellijnID" Type="int" Nullable="false" />
-    <Property Name="Plaatsnummer" Type="int" Nullable="false" />
-    <Property Name="Treinklasse" Type="tinyint" Nullable="false" />
   </EntityType>
   <EntityType Name="tblTussenlocatie">
     <Key>
@@ -159,23 +215,61 @@
     </Key>
     <Property Name="TrajectID" Type="int" Nullable="false" />
     <Property Name="Volgnummer" Type="int" Nullable="false" />
-    <Property Name="Naam" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Naam" Type="nvarchar" Nullable="false" MaxLength="50" />
   </EntityType>
   <EntityType Name="tblWinkelmandlijn">
     <Key>
       <PropertyRef Name="WinkelmandlijnID" />
     </Key>
     <Property Name="WinkelmandlijnID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="GebruikersID" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="GebruikersID" Type="nvarchar" Nullable="false" MaxLength="128" />
     <Property Name="ProductID" Type="int" Nullable="false" />
-    <Property Name="Naam" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="Datum" Type="date" Nullable="false" />
+    <Property Name="Naam" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Datum" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblTreinplaats">
+    <Key>
+      <PropertyRef Name="TreinplaatsID" />
+    </Key>
+    <Property Name="TreinplaatsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naam" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="BestellijnID" Type="int" Nullable="false" />
+    <Property Name="Plaatsnummer" Type="int" Nullable="false" />
+    <Property Name="Treinklasse" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblBestelling">
+    <Key>
+      <PropertyRef Name="BestellingID" />
+    </Key>
+    <Property Name="BestellingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GebruikersID" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Vertrekdatum" Type="datetime" Nullable="false" />
+    <Property Name="Besteldatum" Type="datetime" Nullable="false" />
+    <Property Name="Geannuleerd" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams1Set">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" Nullable="true" />
+    <Property Name="definition" Type="varbinary(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="AspNetRoles_Id" />
+      <PropertyRef Name="AspNetUsers_Id" />
+    </Key>
+    <Property Name="AspNetRoles_Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="AspNetUsers_Id" Type="nvarchar" Nullable="false" MaxLength="128" />
   </EntityType>
   <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
-    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+    <End Role="AspNetUsers" Type="VivesTGVModel.Store.AspNetUsers" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <End Role="AspNetUserClaims" Type="VivesTGVModel.Store.AspNetUserClaims" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="AspNetUsers">
         <PropertyRef Name="Id" />
@@ -186,10 +280,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
-    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+    <End Role="AspNetUsers" Type="VivesTGVModel.Store.AspNetUsers" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <End Role="AspNetUserLogins" Type="VivesTGVModel.Store.AspNetUserLogins" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="AspNetUsers">
         <PropertyRef Name="Id" />
@@ -199,49 +293,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
-    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="AspNetRoles">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="AspNetUserRoles">
-        <PropertyRef Name="RoleId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
-    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="AspNetUsers">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="AspNetUserRoles">
-        <PropertyRef Name="UserId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tblBestellijn_tblBesteling">
-    <End Role="tblBestelling" Type="Self.tblBestelling" Multiplicity="1" />
-    <End Role="tblBestellijn" Type="Self.tblBestellijn" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblBestelling">
-        <PropertyRef Name="BestellingID" />
-      </Principal>
-      <Dependent Role="tblBestellijn">
-        <PropertyRef Name="BestellingID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_tblBestellijn_tblProduct">
-    <End Role="tblProduct" Type="Self.tblProduct" Multiplicity="1" />
-    <End Role="tblBestellijn" Type="Self.tblBestellijn" Multiplicity="*" />
+    <End Role="tblProduct" Type="VivesTGVModel.Store.tblProduct" Multiplicity="1" />
+    <End Role="tblBestellijn" Type="VivesTGVModel.Store.tblBestellijn" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblProduct">
         <PropertyRef Name="ProductID" />
@@ -251,21 +305,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tblBestelling_AspNetUsers">
-    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
-    <End Role="tblBestelling" Type="Self.tblBestelling" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="AspNetUsers">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="tblBestelling">
-        <PropertyRef Name="GebruikersID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_tblHotel_tblStad">
-    <End Role="tblStad" Type="Self.tblStad" Multiplicity="1" />
-    <End Role="tblHotel" Type="Self.tblHotel" Multiplicity="*" />
+    <End Role="tblStad" Type="VivesTGVModel.Store.tblStad" Multiplicity="1" />
+    <End Role="tblHotel" Type="VivesTGVModel.Store.tblHotel" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblStad">
         <PropertyRef Name="StadID" />
@@ -276,8 +318,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tblProduct_tblHotel">
-    <End Role="tblHotel" Type="Self.tblHotel" Multiplicity="0..1" />
-    <End Role="tblProduct" Type="Self.tblProduct" Multiplicity="*" />
+    <End Role="tblHotel" Type="VivesTGVModel.Store.tblHotel" Multiplicity="0..1" />
+    <End Role="tblProduct" Type="VivesTGVModel.Store.tblProduct" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblHotel">
         <PropertyRef Name="HotelID" />
@@ -288,8 +330,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tblProduct_tblTraject">
-    <End Role="tblTraject" Type="Self.tblTraject" Multiplicity="0..1" />
-    <End Role="tblProduct" Type="Self.tblProduct" Multiplicity="*" />
+    <End Role="tblTraject" Type="VivesTGVModel.Store.tblTraject" Multiplicity="0..1" />
+    <End Role="tblProduct" Type="VivesTGVModel.Store.tblProduct" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblTraject">
         <PropertyRef Name="TrajectID" />
@@ -300,8 +342,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tblTraject_tblStadAankomst">
-    <End Role="tblStad" Type="Self.tblStad" Multiplicity="1" />
-    <End Role="tblTraject" Type="Self.tblTraject" Multiplicity="*" />
+    <End Role="tblStad" Type="VivesTGVModel.Store.tblStad" Multiplicity="1" />
+    <End Role="tblTraject" Type="VivesTGVModel.Store.tblTraject" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblStad">
         <PropertyRef Name="StadID" />
@@ -312,8 +354,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tblTraject_tblStadVertrek">
-    <End Role="tblStad" Type="Self.tblStad" Multiplicity="1" />
-    <End Role="tblTraject" Type="Self.tblTraject" Multiplicity="*" />
+    <End Role="tblStad" Type="VivesTGVModel.Store.tblStad" Multiplicity="1" />
+    <End Role="tblTraject" Type="VivesTGVModel.Store.tblTraject" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblStad">
         <PropertyRef Name="StadID" />
@@ -323,21 +365,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tblTreinplaats_tblBestellijn">
-    <End Role="tblBestellijn" Type="Self.tblBestellijn" Multiplicity="1" />
-    <End Role="tblTreinplaats" Type="Self.tblTreinplaats" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblBestellijn">
-        <PropertyRef Name="BestellijnID" />
-      </Principal>
-      <Dependent Role="tblTreinplaats">
-        <PropertyRef Name="BestellijnID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_tblTussenlocatie_tblTraject">
-    <End Role="tblTraject" Type="Self.tblTraject" Multiplicity="1" />
-    <End Role="tblTussenlocatie" Type="Self.tblTussenlocatie" Multiplicity="*" />
+    <End Role="tblTraject" Type="VivesTGVModel.Store.tblTraject" Multiplicity="1" />
+    <End Role="tblTussenlocatie" Type="VivesTGVModel.Store.tblTussenlocatie" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblTraject">
         <PropertyRef Name="TrajectID" />
@@ -347,21 +377,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tblWinkelmand_tblProduct">
-    <End Role="tblProduct" Type="Self.tblProduct" Multiplicity="1" />
-    <End Role="tblWinkelmandlijn" Type="Self.tblWinkelmandlijn" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblProduct">
-        <PropertyRef Name="ProductID" />
-      </Principal>
-      <Dependent Role="tblWinkelmandlijn">
-        <PropertyRef Name="ProductID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_tblWinkelmandlijn_AspNetUsers">
-    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
-    <End Role="tblWinkelmandlijn" Type="Self.tblWinkelmandlijn" Multiplicity="*" />
+    <End Role="AspNetUsers" Type="VivesTGVModel.Store.AspNetUsers" Multiplicity="1" />
+    <End Role="tblWinkelmandlijn" Type="VivesTGVModel.Store.tblWinkelmandlijn" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="AspNetUsers">
         <PropertyRef Name="Id" />
@@ -371,87 +389,76 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="VivesTGVModelStoreContainer">
-    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tblBestellijn" EntityType="Self.tblBestellijn" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tblBestelling" EntityType="Self.tblBestelling" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tblGebruiker" EntityType="Self.tblGebruiker" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tblHotel" EntityType="Self.tblHotel" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tblProduct" EntityType="Self.tblProduct" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tblStad" EntityType="Self.tblStad" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tblTraject" EntityType="Self.tblTraject" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tblTreinplaats" EntityType="Self.tblTreinplaats" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tblTussenlocatie" EntityType="Self.tblTussenlocatie" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tblWinkelmandlijn" EntityType="Self.tblWinkelmandlijn" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
-      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
-      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
-      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
-      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
-      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
-      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
-      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
-      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblBestellijn_tblBesteling" Association="Self.FK_tblBestellijn_tblBesteling">
-      <End Role="tblBestelling" EntitySet="tblBestelling" />
-      <End Role="tblBestellijn" EntitySet="tblBestellijn" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblBestellijn_tblProduct" Association="Self.FK_tblBestellijn_tblProduct">
-      <End Role="tblProduct" EntitySet="tblProduct" />
-      <End Role="tblBestellijn" EntitySet="tblBestellijn" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblBestelling_AspNetUsers" Association="Self.FK_tblBestelling_AspNetUsers">
-      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
-      <End Role="tblBestelling" EntitySet="tblBestelling" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblHotel_tblStad" Association="Self.FK_tblHotel_tblStad">
-      <End Role="tblStad" EntitySet="tblStad" />
-      <End Role="tblHotel" EntitySet="tblHotel" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblProduct_tblHotel" Association="Self.FK_tblProduct_tblHotel">
-      <End Role="tblHotel" EntitySet="tblHotel" />
-      <End Role="tblProduct" EntitySet="tblProduct" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblProduct_tblTraject" Association="Self.FK_tblProduct_tblTraject">
-      <End Role="tblTraject" EntitySet="tblTraject" />
-      <End Role="tblProduct" EntitySet="tblProduct" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblTraject_tblStadAankomst" Association="Self.FK_tblTraject_tblStadAankomst">
-      <End Role="tblStad" EntitySet="tblStad" />
-      <End Role="tblTraject" EntitySet="tblTraject" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblTraject_tblStadVertrek" Association="Self.FK_tblTraject_tblStadVertrek">
-      <End Role="tblStad" EntitySet="tblStad" />
-      <End Role="tblTraject" EntitySet="tblTraject" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblTreinplaats_tblBestellijn" Association="Self.FK_tblTreinplaats_tblBestellijn">
-      <End Role="tblBestellijn" EntitySet="tblBestellijn" />
-      <End Role="tblTreinplaats" EntitySet="tblTreinplaats" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblTussenlocatie_tblTraject" Association="Self.FK_tblTussenlocatie_tblTraject">
-      <End Role="tblTraject" EntitySet="tblTraject" />
-      <End Role="tblTussenlocatie" EntitySet="tblTussenlocatie" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblWinkelmand_tblProduct" Association="Self.FK_tblWinkelmand_tblProduct">
-      <End Role="tblProduct" EntitySet="tblProduct" />
-      <End Role="tblWinkelmandlijn" EntitySet="tblWinkelmandlijn" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblWinkelmandlijn_AspNetUsers" Association="Self.FK_tblWinkelmandlijn_AspNetUsers">
-      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
-      <End Role="tblWinkelmandlijn" EntitySet="tblWinkelmandlijn" />
-    </AssociationSet>
-  </EntityContainer>
+  <Association Name="FK_tblWinkelmand_tblProduct">
+    <End Role="tblProduct" Type="VivesTGVModel.Store.tblProduct" Multiplicity="1" />
+    <End Role="tblWinkelmandlijn" Type="VivesTGVModel.Store.tblWinkelmandlijn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProduct">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="tblWinkelmandlijn">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTreinplaats_tblBestellijn">
+    <End Role="tblBestellijn" Type="VivesTGVModel.Store.tblBestellijn" Multiplicity="1" />
+    <End Role="tblTreinplaats" Type="VivesTGVModel.Store.tblTreinplaats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBestellijn">
+        <PropertyRef Name="BestellijnID" />
+      </Principal>
+      <Dependent Role="tblTreinplaats">
+        <PropertyRef Name="BestellijnID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblBestelling_AspNetUsers">
+    <End Role="AspNetUsers" Type="VivesTGVModel.Store.AspNetUsers" Multiplicity="1" />
+    <End Role="tblBestelling" Type="VivesTGVModel.Store.tblBestelling" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblBestelling">
+        <PropertyRef Name="GebruikersID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblBestellijn_tblBesteling">
+    <End Role="tblBestelling" Type="VivesTGVModel.Store.tblBestelling" Multiplicity="1" />
+    <End Role="tblBestellijn" Type="VivesTGVModel.Store.tblBestellijn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBestelling">
+        <PropertyRef Name="BestellingID" />
+      </Principal>
+      <Dependent Role="tblBestellijn">
+        <PropertyRef Name="BestellingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserRoles_AspNetRoles">
+    <End Role="AspNetRoles" Type="VivesTGVModel.Store.AspNetRoles" Multiplicity="1" />
+    <End Role="AspNetUserRoles" Type="VivesTGVModel.Store.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="AspNetRoles_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserRoles_AspNetUsers">
+    <End Role="AspNetUserRoles" Type="VivesTGVModel.Store.AspNetUserRoles" Multiplicity="*" />
+    <End Role="AspNetUsers" Type="VivesTGVModel.Store.AspNetUsers" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="AspNetUsers_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

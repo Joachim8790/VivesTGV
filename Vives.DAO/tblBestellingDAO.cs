@@ -13,7 +13,7 @@ namespace Vives.DAO
         //Zoek alle bestellingen van gebruiker
         public IEnumerable<tblBestelling> getBestellingenBytblGebruiker(string ID)
         {
-            using (var db = new VivesTGVEntities())
+            using (var db = new VivesTGVEntities1())
             {
                 return db.tblBestelling.Where(a => a.GebruikersID == ID).ToList();
             }
@@ -21,7 +21,7 @@ namespace Vives.DAO
         //Zoek bestelling op ID
         public tblBestelling getBestellingByID(int ID)
         {
-            using (var db = new VivesTGVEntities())
+            using (var db = new VivesTGVEntities1())
             {
                 return db.tblBestelling.Where(a => a.BestellingID == ID).FirstOrDefault();
             }
@@ -30,7 +30,7 @@ namespace Vives.DAO
         //Lijst van bestellijnen per bestelling
         public IEnumerable<tblBestellijn> getBestellijnenByBestelling(tblBestelling bestelling)
         {
-            using (var db = new VivesTGVEntities())
+            using (var db = new VivesTGVEntities1())
             {
                 return db.tblBestellijn.Where(a => a.BestellingID == bestelling.BestellingID).ToList();
             }
@@ -38,7 +38,7 @@ namespace Vives.DAO
         //Schrijf nieuwe bestelling weg
         public int addBestelling(tblBestelling bestelling)
         {
-            using (var db = new VivesTGVEntities())
+            using (var db = new VivesTGVEntities1())
             {
                 db.tblBestelling.Add(bestelling);
                 db.SaveChanges();
@@ -48,7 +48,7 @@ namespace Vives.DAO
         }
         public void bestellingAnnuleren(int id)
         {
-            using (var db = new VivesTGVEntities())
+            using (var db = new VivesTGVEntities1())
             {
                 tblBestelling bestelling = getBestellingByID(id);
                 bestelling.Geannuleerd = 1;

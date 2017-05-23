@@ -24,9 +24,9 @@ namespace Vives.Models
         public int BestellingID { get; set; }
         public int ProductID { get; set; }
     
-        public virtual tblBestelling tblBestelling { get; set; }
         public virtual tblProduct tblProduct { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblTreinplaats> tblTreinplaats { get; set; }
+        public virtual tblBestelling tblBestelling { get; set; }
     }
 }
