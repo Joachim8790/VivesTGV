@@ -9,6 +9,10 @@ namespace VivesTGV.Migrations
     {
         public Configuration()
         {
+
+
+
+
             AutomaticMigrationsEnabled = true;
             ContextKey = "VivesTGV.Models.ApplicationDbContext";
         }
