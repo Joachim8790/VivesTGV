@@ -175,6 +175,7 @@
       <DependentUpon>VivesTGVDataModel.edmx</DependentUpon>
       <LastGenOutput>VivesTGVDataModel.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="VivesTGVDataModel.edmx.sql" />
     <Content Include="VivesTGVDataModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>VivesTGVDataModel.edmx</DependentUpon>
