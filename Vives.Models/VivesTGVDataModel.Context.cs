@@ -16,7 +16,7 @@ namespace Vives.Models
     public partial class VivesTGVEntities : DbContext
     {
         public VivesTGVEntities()
-            : base("name=VivesTGVEntities")
+            : base("VivesTGVEntities")
         {
         }
     
