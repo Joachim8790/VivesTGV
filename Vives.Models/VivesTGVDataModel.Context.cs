@@ -42,5 +42,7 @@ namespace Vives.Models
         public virtual DbSet<tblWinkelmandlijn> tblWinkelmandlijn { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
+        public virtual DbSet<C__MigrationHistory1> C__MigrationHistory1Set { get; set; }
+        public virtual DbSet<database_firewall_rules1> database_firewall_rules1 { get; set; }
     }
 }

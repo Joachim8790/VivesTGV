@@ -37,6 +37,8 @@
         <AssociationConnector Association="VivesTGVModel.AspNetUserRoles" ManuallyRouted="false" />
         <EntityTypeShape EntityType="VivesTGVModel.sysdiagrams" Width="1.5" PointX="10.375" PointY="0.75" />
         <EntityTypeShape EntityType="VivesTGVModel.database_firewall_rules" Width="1.5" PointX="10.375" PointY="3.75" />
+        <EntityTypeShape EntityType="VivesTGVModel.C__MigrationHistory1" Width="1.5" PointX="8.375" PointY="11.75" />
+        <EntityTypeShape EntityType="VivesTGVModel.database_firewall_rules1" Width="1.5" PointX="10.375" PointY="11.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

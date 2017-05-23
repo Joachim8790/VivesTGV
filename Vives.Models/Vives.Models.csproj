@@ -81,7 +81,13 @@
     <Compile Include="C__MigrationHistory.cs">
       <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="C__MigrationHistory1.cs">
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="database_firewall_rules.cs">
+      <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="database_firewall_rules1.cs">
       <DependentUpon>VivesTGVDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Enums\Bestellingstatus.cs" />
