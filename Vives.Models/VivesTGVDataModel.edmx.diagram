@@ -4,15 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="31e0a489a1a1418585d54ab5e34a7125" Name="Diagram1">
+      <Diagram DiagramId="120f0e8751f9402e8b12a1c2747214b7" Name="Diagram1">
         <EntityTypeShape EntityType="VivesTGVModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="VivesTGVModel.AspNetRoles" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
         <EntityTypeShape EntityType="VivesTGVModel.AspNetUserClaims" Width="1.5" PointX="5.25" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="VivesTGVModel.AspNetUserLogins" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="VivesTGVModel.AspNetUsers" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VivesTGVModel.C__MigrationHistory1" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VivesTGVModel.database_firewall_rules" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VivesTGVModel.sysdiagrams" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="VivesTGVModel.tblBestellijn" Width="1.5" PointX="7.5" PointY="8.25" IsExpanded="true" />
         <EntityTypeShape EntityType="VivesTGVModel.tblBestelling" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="VivesTGVModel.tblGebruiker" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VivesTGVModel.tblGebruiker" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="VivesTGVModel.tblHotel" Width="1.5" PointX="3.75" PointY="11.375" IsExpanded="true" />
         <EntityTypeShape EntityType="VivesTGVModel.tblProduct" Width="1.5" PointX="6" PointY="13.5" IsExpanded="true" />
         <EntityTypeShape EntityType="VivesTGVModel.tblStad" Width="1.5" PointX="1.5" PointY="11.625" IsExpanded="true" />
@@ -20,6 +23,7 @@
         <EntityTypeShape EntityType="VivesTGVModel.tblTreinplaats" Width="1.5" PointX="9.75" PointY="8.25" IsExpanded="true" />
         <EntityTypeShape EntityType="VivesTGVModel.tblTussenlocatie" Width="1.5" PointX="6" PointY="17.5" IsExpanded="true" />
         <EntityTypeShape EntityType="VivesTGVModel.tblWinkelmandlijn" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VivesTGVModel.database_firewall_rules1" Width="1.5" PointX="11.75" PointY="6.75" IsExpanded="true" />
         <AssociationConnector Association="VivesTGVModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
         <AssociationConnector Association="VivesTGVModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
         <AssociationConnector Association="VivesTGVModel.FK_tblBestelling_AspNetUsers" ManuallyRouted="false" />
@@ -35,10 +39,6 @@
         <AssociationConnector Association="VivesTGVModel.FK_tblTraject_tblStadVertrek" ManuallyRouted="false" />
         <AssociationConnector Association="VivesTGVModel.FK_tblTussenlocatie_tblTraject" ManuallyRouted="false" />
         <AssociationConnector Association="VivesTGVModel.AspNetUserRoles" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="VivesTGVModel.sysdiagrams" Width="1.5" PointX="10.375" PointY="0.75" />
-        <EntityTypeShape EntityType="VivesTGVModel.database_firewall_rules" Width="1.5" PointX="10.375" PointY="3.75" />
-        <EntityTypeShape EntityType="VivesTGVModel.C__MigrationHistory1" Width="1.5" PointX="8.375" PointY="11.75" />
-        <EntityTypeShape EntityType="VivesTGVModel.database_firewall_rules1" Width="1.5" PointX="10.375" PointY="11.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

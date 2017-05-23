@@ -16,7 +16,7 @@ namespace Vives.Models
     public partial class VivesTGVEntities : DbContext
     {
         public VivesTGVEntities()
-            : base("VivesTGVEntities")
+            : base("name=VivesTGVEntities")
         {
         }
     
@@ -30,6 +30,9 @@ namespace Vives.Models
         public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
         public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
+        public virtual DbSet<C__MigrationHistory1> C__MigrationHistory1 { get; set; }
+        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<tblBestellijn> tblBestellijn { get; set; }
         public virtual DbSet<tblBestelling> tblBestelling { get; set; }
         public virtual DbSet<tblGebruiker> tblGebruiker { get; set; }
@@ -40,9 +43,6 @@ namespace Vives.Models
         public virtual DbSet<tblTreinplaats> tblTreinplaats { get; set; }
         public virtual DbSet<tblTussenlocatie> tblTussenlocatie { get; set; }
         public virtual DbSet<tblWinkelmandlijn> tblWinkelmandlijn { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
-        public virtual DbSet<C__MigrationHistory1> C__MigrationHistory1Set { get; set; }
         public virtual DbSet<database_firewall_rules1> database_firewall_rules1 { get; set; }
     }
 }
